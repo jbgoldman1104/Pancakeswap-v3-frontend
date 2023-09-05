@@ -410,7 +410,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex id="about" className="about-area" pt="50px" pb="80px">
+        <Flex id="about" className="about-area" pt="50px" >
         <Flex className="container">
             <Flex alignItems="center" flexDirection="row" flex="1" justifyContent="center">
               <Flex flex="1" >

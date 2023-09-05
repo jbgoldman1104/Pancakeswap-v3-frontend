@@ -1,10 +1,10 @@
 import { DefaultSeoProps } from 'next-seo'
 
 export const SEO: DefaultSeoProps = {
-  titleTemplate: '%s | PancakeSwap',
-  defaultTitle: 'PancakeSwap',
+  titleTemplate: '%s | Z Protocol',
+  defaultTitle: 'Z Protocol',
   description:
-    'Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on BNB Smart Chain (BSC) with the best farms in DeFi and a lottery for CAKE.',
+    'The Leading DeFi Ecosystem.',
   twitter: {
     cardType: 'summary_large_image',
     handle: '@PancakeSwap',

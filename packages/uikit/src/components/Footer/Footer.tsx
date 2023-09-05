@@ -37,51 +37,14 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   return (
     <StyledFooter
       data-theme="dark"
-      p={["40px 16px", null, "56px 40px 32px 40px"]}
+      p="20px"
       position="relative"
       {...props}
       justifyContent="center"
     >
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
-        <StyledIconMobileContainer display={["block", null, "none"]}>
-          <LogoWithTextIcon width="130px" />
-        </StyledIconMobileContainer>
-        <Flex
-          order={[2, null, 1]}
-          flexDirection={["column", null, "row"]}
-          justifyContent="space-between"
-          alignItems="flex-start"
-          mb={["42px", null, "36px"]}
-        >
-          {items?.map((item) => (
-            <StyledList key={item.label}>
-              <StyledListItem>{item.label}</StyledListItem>
-              {item.items?.map(({ label, href, isHighlighted = false }) => (
-                <StyledListItem key={label}>
-                  {href ? (
-                    <Link
-                      data-theme="dark"
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      color={isHighlighted ? vars.colors.warning : "text"}
-                      bold={false}
-                    >
-                      {label}
-                    </Link>
-                  ) : (
-                    <StyledText>{label}</StyledText>
-                  )}
-                </StyledListItem>
-              ))}
-            </StyledList>
-          ))}
-          <Box display={["none", null, "block"]}>
-            <LogoWithTextIcon width="160px" />
-          </Box>
-        </Flex>
-        <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
-        <StyledToolsContainer
+        <StyledSocialLinks order={[2]} />
+        {/* <StyledToolsContainer
           data-theme="dark"
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
@@ -111,7 +74,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
               {buyCakeLabel}
             </Button>
           </Flex>
-        </StyledToolsContainer>
+        </StyledToolsContainer> */}
       </Flex>
     </StyledFooter>
   );
