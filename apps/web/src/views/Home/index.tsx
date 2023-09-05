@@ -315,11 +315,11 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               <Flex flex="1" className="card-item">
                 <div className="choose-item">
                   <div className="choose-icon">
-                    <a href="/"><i className="fa fa-rocket" style={{fontSize: "40px"}}/> </a>
+                    <a href="/launchpad"><i className="fa fa-rocket" style={{fontSize: "40px"}}/> </a>
                   </div>
                   <div className="choose-content">
                     <h2 className="title">
-                      <a href="/">LAUNCHPAD</a>
+                      <a href="/launchpad">LAUNCHPAD</a>
                     </h2>
                     <p>
                     With a tiered approach, the more ZP you stake, 
