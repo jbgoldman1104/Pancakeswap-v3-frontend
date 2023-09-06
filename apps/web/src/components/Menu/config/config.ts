@@ -53,7 +53,10 @@ const config: (
     {
       label: t('Liquidity'),
       href: '/liquidity',
-      icon: FarmIcon
+      showItemsOnMobile: false,
+      icon: FarmIcon,
+      fillIcon: FarmIcon
+
     },
     {
       label: t('Earn'),
@@ -78,6 +81,7 @@ const config: (
       href: '/launchpad',
       icon: TrophyIcon,
       fillIcon: TrophyFillIcon,
+      showItemsOnMobile: false,
       
     },
     
