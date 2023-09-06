@@ -1,9 +1,11 @@
 import { useMemo } from "react";
 import styled from "styled-components";
+import { useMatchBreakpoints } from '@pancakeswap/uikit'
 import { Container } from "../Layouts";
 import { Box, BoxProps, Flex, FlexProps } from "../Box";
 import CurvedDivider from "./CurvedDivider";
 import { ClipFill, DividerFill } from "./types";
+
 
 interface PageSectionProps extends BackgroundColorProps {
   svgFill?: string;
@@ -60,7 +62,12 @@ const PageSection: React.FC<React.PropsWithChildren<PageSectionProps>> = ({
   innerProps,
   ...props
 }) => {
+  const { isMobile } = useMatchBreakpoints()
+
   const padding = useMemo(() => {
+    if ( isMobile ) {
+      return "24px 0";
+    }
     // No curved divider
     if (!hasCurvedDivider) {
       return "48px 0";

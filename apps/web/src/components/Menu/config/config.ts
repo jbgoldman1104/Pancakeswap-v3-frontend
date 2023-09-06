@@ -10,6 +10,7 @@ import {
   NftIcon,
   NftFillIcon,
   MoreIcon,
+  FarmIcon,
   DropdownMenuItems,
 } from '@pancakeswap/uikit'
 import { ContextApi } from '@pancakeswap/localization'
@@ -52,6 +53,7 @@ const config: (
     {
       label: t('Liquidity'),
       href: '/liquidity',
+      icon: FarmIcon
     },
     {
       label: t('Earn'),

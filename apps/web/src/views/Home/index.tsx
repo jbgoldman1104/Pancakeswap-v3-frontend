@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { PageSection, Flex } from '@pancakeswap/uikit'
+import { PageSection, Flex, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useAccount } from 'wagmi'
 import useTheme from 'hooks/useTheme'
 import Container from 'components/Layout/Container'
@@ -46,6 +46,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
   const HomeSectionContainerStyles = { margin: '0', width: '100%', maxWidth: '968px' }
 
   const { t } = useTranslation()
+  const { isMobile } = useMatchBreakpoints()
 
   return (
     <>
@@ -72,6 +73,12 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           .about-img {
             position: relative;
             padding-left: 120px;
+          }
+
+          .mobile .about-img {
+            position: relative;
+            padding-left: 40px;
+            padding-right: 40px;
           }
 
           .fadeInLeft {
@@ -140,6 +147,11 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               border-radius: 15px;
               padding: 60px 40px;
               transition: .3s ease-in-out;
+          }
+
+          .mobile .choose-item {
+            padding: 30px 40px;
+            margin-bottom: 20px; 
           }
           .card-item {
             padding: 0 10px;
@@ -230,10 +242,11 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         innerProps={{ style: { margin: '0', width: '100%' } }}
         index={2}
         hasCurvedDivider={false}
+        className={isMobile ? "mobile" : ""}
       >
-        <section id="about" className="about-area pt-50 pb-130">
+        <section id="about" className={isMobile ? "about-area pt-20 pb-30": "about-area pt-50 pb-130"} >
           <div className="container">
-            <Flex alignItems="center" flexDirection="row" flex="1" justifyContent="center">
+            <Flex alignItems="center" flexDirection={['column', null, null, 'row']} flex="1" justifyContent="center">
               <Flex  flex="1">
                 <div
                   className="about-img wow fadeInLeft"
@@ -245,7 +258,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   }}
                 >
                   <img src="images/zprotocol/about_img01.png" alt="" />
-                  <img src="images/zprotocol/banner_shape02.png" alt="" className="img-two" />
+                  <img src="images/zprotocol/banner_shape02.png" alt="" className={isMobile ? "img-two" : ""} />
                 </div>
               </Flex>
               <Flex  flex="1">
@@ -285,7 +298,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           </div>
         </section>
 
-        <Flex className="choose-area" pt="100px" pb="100px" flexDirection="row">
+        <Flex className="choose-area" pt="100px" pb={isMobile? "40px" : "100px"} flexDirection="row">
           <Flex className="container" pb="70px" flexDirection="column">
             <Flex alignItems="center" flexDirection="row" flex="1" justifyContent="center">
               <Flex flex="1"  justifyContent="center" flexDirection="row">
@@ -295,7 +308,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 </div>
               </Flex>
             </Flex>
-            <Flex  flexDirection="row">
+            <Flex  flexDirection={isMobile ? "column" : "row"}>
               <Flex flex="1" className="card-item">
                 <div className="choose-item">
                   <div className="choose-icon">
@@ -365,9 +378,9 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex id="about" className="about-area" pt="10px" pb="80px">
+        <Flex id="about" className="about-area" pt="10px" pb={isMobile? "40px" : "80px"}>
           <Flex className="container">
-            <Flex alignItems="center" flexDirection="row" flex="1" justifyContent="center">
+            <Flex alignItems="center" flexDirection={isMobile? "column-reverse" : "row"} flex="1" justifyContent="center">
             
               <Flex flex="1" >
                 <div
@@ -412,7 +425,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         </Flex>
         <Flex id="about" className="about-area" pt="50px" >
         <Flex className="container">
-            <Flex alignItems="center" flexDirection="row" flex="1" justifyContent="center">
+            <Flex alignItems="center" flexDirection={isMobile? "column" : "row"} flex="1" justifyContent="center">
               <Flex flex="1" >
                 <div
                   className="wow fadeInLeft"

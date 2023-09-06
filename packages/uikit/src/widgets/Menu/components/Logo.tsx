@@ -16,7 +16,7 @@ const blink = keyframes`
 const StyledLink = styled("a")`
   display: flex;
   .mobile-icon {
-    width: 32px;
+    width: 140px;
     ${({ theme }) => theme.mediaQueries.lg} {
       display: none;
     }
@@ -50,7 +50,7 @@ const Logo: React.FC<React.PropsWithChildren<Props>> = ({ href }) => {
         <img src="images/zprotocol/logo4.png" alt=""/>
       </div>
       <div className="mobile-icon">
-        <img src="images/zprotocol/about_img01.png" alt=""/>
+        <img src="images/zprotocol/logo4.png" alt=""/>
       </div>
       
     </>

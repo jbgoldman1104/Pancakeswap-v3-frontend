@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, NextLinkFromReactRouter } from '@pancakeswap/uikit'
+import { Button, Flex, Heading, NextLinkFromReactRouter, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useAccount } from 'wagmi'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { useTranslation } from '@pancakeswap/localization'
@@ -93,7 +93,7 @@ const Hero = () => {
   const { t } = useTranslation()
   const { address: account } = useAccount()
   const { chainId } = useActiveChainId()
-
+  const { isMobile } = useMatchBreakpoints()
   return (
     <>
       <style jsx global>
@@ -113,12 +113,24 @@ const Hero = () => {
 
           .ValueItem {
             font-size: 1.4rem !important;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          .ValueItem.Mobile {
+            font-size: 1rem !important;
           }
 
           .ValueItem .value-text {
             font-weight: bold;
             font-size: 1.4rem !important;
             margin-top: 10px;
+          }
+
+          .ValueItem.Mobile .value-text {
+            font-size: 1rem !important;
+            margin-top: 4px;
+            margin-bottom: 10px;
           }
 
           .ValueItem.Sep::before{
@@ -141,43 +153,43 @@ const Hero = () => {
       </style>
       <BgWrapper className="banner-bg">
         <InnerWrapper>
-          <img src="images/zprotocol/banner_bg6.jpg" alt="" />
+          <img src="images/zprotocol/banner_bg6.jpg" alt="" style={{minWidth:"480px"}} />
         </InnerWrapper>
       </BgWrapper>
       <Flex
         position="relative"
-        flexDirection={['column-reverse', null, null, 'row']}
-        alignItems={['flex-end', null, null, 'center']}
+        flexDirection={['column', null, null, 'row']}
+        alignItems={['center', null, null, 'center']}
         justifyContent="center"
-        mt='120px'
+        mt={isMobile ? '60px' : '120px'}
         id="homepage-hero"
-        
       >
-      
-        <Flex flex="1" flexDirection="column"   pb="60px">
-          <Heading scale="xxl"  mb="50px">
+        <Flex flex="1" flexDirection="column"   pb={isMobile ? "30px" : "60px"}>
+          <Heading scale={isMobile ? 'lg' : 'xxl'}  mb={isMobile ? "20px" : "50px"}>
             THE LEADING DEFI<br/>ECOSYSTEM ON<br/>ZKSYNC
           </Heading>
-
           <Flex>
-            <Flex flex="1" flexDirection="column" className="ValueItem">
-                <span>Total Value Locked</span>
-                <span className="value-text">$0</span>
-            </Flex>
+            <Flex flexDirection={isMobile ? "column" : "row"} flex="1">
+              <Flex flex="1" flexDirection="column" className={isMobile ? "ValueItem Mobile" : "ValueItem"}>
+                  <span>Total Value Locked</span>
+                  <span className="value-text">$0</span>
+              </Flex>
 
-            <Flex flex="1" flexDirection="column" className="ValueItem Sep">
-                <span>Circulating supply</span>
-                <span className="value-text">600,000,000</span>
+              <Flex flex="1" flexDirection="column" className={isMobile ? "ValueItem Mobile" : "ValueItem"}>
+                  <span>Circulating supply</span>
+                  <span className="value-text">600,000,000</span>
+              </Flex>
             </Flex>
+            <Flex flexDirection={isMobile ? "column" : "row"} flex="1">
+              <Flex flex="1" flexDirection="column" className={isMobile ? "ValueItem Mobile" : "ValueItem"}>
+                  <span>Market cap</span>
+                  <span className="value-text">$660,000</span>
+              </Flex>
 
-            <Flex flex="1" flexDirection="column" className="ValueItem Sep">
-                <span>Market cap</span>
-                <span className="value-text">$660,000</span>
-            </Flex>
-
-            <Flex flex="1" flexDirection="column" className="ValueItem Sep">
-                <span>Current emission</span>
-                <span className="value-text">2.315/sec</span>
+              <Flex flex="1" flexDirection="column" className={isMobile ? "ValueItem Mobile" : "ValueItem"}>
+                  <span>Current emission</span>
+                  <span className="value-text">2.315/sec</span>
+              </Flex>
             </Flex>
           </Flex>
 
