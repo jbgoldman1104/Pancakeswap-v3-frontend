@@ -126,7 +126,7 @@ export const USDC = {
 }
 
 export const USDT = {
-  [ChainId.BSC]: USDT_BSC,
+[ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
 }
 
