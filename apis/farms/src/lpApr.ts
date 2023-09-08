@@ -19,6 +19,8 @@ const STABLESWAP_SUBGRAPH_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/pa
 const LP_HOLDERS_FEE = 0.0017
 const WEEKS_IN_A_YEAR = 52.1429
 
+/** Goldman */
+
 const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.BSC]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks',
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',

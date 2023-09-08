@@ -19,8 +19,10 @@ export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
-  [ChainId.BSC_TESTNET]: '0x6725f303b657a9451d8ba641348b6761a6cc7a17',
+  [ChainId.BSC_TESTNET]: '0xC74c504185322b5e699Ec079B06AbcbfC5a76755',
 }
+
+/** Goldman */
 export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5'
 
 const INIT_CODE_HASH_ETH = '0x57224589c67f3f30a6b0d7a1b54cf3153ab84563bc609ef41dfb34f8b2974d2d'
@@ -69,11 +71,11 @@ export const WBNB = {
   ),
   [ChainId.BSC_TESTNET]: new ERC20Token(
     ChainId.BSC_TESTNET,
-    '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+    '0x5300000000000000000000000000000000000004',
     18,
-    'WBNB',
-    'Wrapped BNB',
-    'https://www.binance.org'
+    'WETH',
+    'Wrapped Ether',
+    'https://weth.io'
   ),
 }
 
@@ -99,9 +101,5 @@ export const NATIVE: Record<
     symbol: 'BNB',
     decimals: 18,
   },
-  [ChainId.BSC_TESTNET]: {
-    name: 'Binance Chain Native Token',
-    symbol: 'tBNB',
-    decimals: 18,
-  },
+  [ChainId.BSC_TESTNET]: { name: 'Ether', symbol: 'ETH', decimals: 18 },
 }

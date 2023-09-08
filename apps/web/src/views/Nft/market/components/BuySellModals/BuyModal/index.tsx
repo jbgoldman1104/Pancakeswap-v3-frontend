@@ -34,6 +34,7 @@ interface BuyModalProps extends InjectedModalProps {
   nftToBuy: NftToken
 }
 
+/** Goldman */
 // NFT WBNB in testnet contract is different
 const TESTNET_WBNB_NFT_ADDRESS = '0x094616f0bdfb0b526bd735bf66eca0ad254ca81f'
 

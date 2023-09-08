@@ -35,6 +35,7 @@ interface ImportProps {
   handleCurrencySelect?: (currency: Currency) => void
 }
 
+/** Goldman */
 const getStandard = (chainId: ChainId) =>
   chainId !== ChainId.BSC && chainId !== ChainId.BSC_TESTNET ? 'ERC20' : 'BEP20'
 

@@ -17,7 +17,7 @@ describe('utils', () => {
     })
     it('enum', () => {
       expect(getBlockExploreLink('abc', 'address', ChainId.BSC_TESTNET)).toEqual(
-        'https://testnet.bscscan.com/address/abc',
+        'https://sepolia-blockscout.scroll.io//address/abc',
       )
     })
   })

@@ -9,6 +9,7 @@ import { fetchStableFarmData } from './fetchStableFarmData'
 import { isStableFarm, SerializedFarmConfig } from './types'
 import { getFullDecimalMultiplier } from './getFullDecimalMultiplier'
 
+/** Goldman */
 const evmNativeStableLpMap = {
   [ChainId.ETHEREUM]: {
     address: '0x2E8135bE71230c6B1B4045696d41C09Db0414226',
