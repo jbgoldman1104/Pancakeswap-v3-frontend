@@ -1,7 +1,7 @@
 import { BinanceWalletConnector } from '@pancakeswap/wagmi/connectors/binanceWallet'
 import { BloctoConnector } from '@pancakeswap/wagmi/connectors/blocto'
 import { TrustWalletConnector } from '@pancakeswap/wagmi/connectors/trustWallet'
-import { bsc, bscTestnet, goerli, mainnet, Chain } from 'wagmi/chains'
+import { bsc, goerli, mainnet, Chain } from 'wagmi/chains'
 import { configureChains, createClient } from 'wagmi'
 import memoize from 'lodash/memoize'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
@@ -13,10 +13,10 @@ import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import { SafeConnector } from './safeConnector'
 
 
-const scrollSepolia:Chain = {
+const scrollTestnet:Chain = {
   id: 534351,
   name: 'Scroll Sepolia Testnet',
-  network: 'scroll_sepolia_testnet',
+  network: 'scroll-testnet',
   nativeCurrency: {
     name: 'ETH',
     symbol: 'ETH',
@@ -27,10 +27,17 @@ const scrollSepolia:Chain = {
       http: ['https://sepolia-rpc.scroll.io'],
       webSocket: ['wss://sepolia-rpc.scroll.io']
     }
-  }
+  },
+  blockExplorers: {
+    default: {
+      name: 'blockscout',
+      url:'https://sepolia-blockscout.scroll.io'
+    }
+  },
+  testnet: true
 }
 
-const CHAINS = [bsc, mainnet, bscTestnet, goerli, scrollSepolia]
+const CHAINS = [bsc, mainnet, goerli, scrollTestnet]
 
 const getNodeRealUrl = (networkName: string) => {
   let host = null

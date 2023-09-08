@@ -1,4 +1,4 @@
-import { bscTestnetTokens } from '@pancakeswap/tokens'
+import { scrollTestnetTokens } from '@pancakeswap/tokens'
 import tryParseAmount from './tryParseAmount'
 
 describe('utils/tryParseAmount', () => {
@@ -10,6 +10,6 @@ describe('utils/tryParseAmount', () => {
   })
 
   it('should pared value', () => {
-    expect(tryParseAmount('100', bscTestnetTokens.cake)).toBeTruthy()
+    expect(tryParseAmount('100', scrollTestnetTokens.cake)).toBeTruthy()
   })
 })

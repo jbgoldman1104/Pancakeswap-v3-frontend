@@ -50,7 +50,7 @@ export const useActiveChainId = () => {
   const { chain } = useNetwork()
 
   /** Goldman */
-  const chainId = ChainId.BSC_TESTNET;// localChainId ?? chain?.id ?? (queryChainId >= 0 ? ChainId.BSC : undefined)
+  const chainId = ChainId.SCROLL_TESTNET;// localChainId ?? chain?.id ?? (queryChainId >= 0 ? ChainId.BSC : undefined)
 
   const isNotMatched = useDeferredValue(chain && localChainId && chain.id !== localChainId)
 

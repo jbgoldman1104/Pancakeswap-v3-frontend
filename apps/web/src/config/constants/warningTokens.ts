@@ -28,4 +28,4 @@ export const bscWarningTokens = {
   ),
 }
 
-export const bscTestnetWarningTokens = {}
+export const scrollTestnetWarningTokens = {}

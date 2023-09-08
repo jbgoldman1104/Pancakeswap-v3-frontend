@@ -10,7 +10,7 @@ export const CAKE_MAINNET = new ERC20Token(
 )
 
 export const CAKE_TESTNET = new ERC20Token(
-  ChainId.BSC_TESTNET,
+  ChainId.SCROLL_TESTNET,
   '0xf9D930B82807434702856eA3ee19Ac7D5E2Aa76d',
   18,
   'ZKH',
@@ -28,7 +28,7 @@ export const USDC_BSC = new ERC20Token(
 )
 
 export const USDC_TESTNET = new ERC20Token(
-  ChainId.BSC_TESTNET,
+  ChainId.SCROLL_TESTNET,
   '0x02a3e7E0480B668bD46b42852C58363F93e3bA5C',
   18,
   'USDC',
@@ -80,7 +80,7 @@ export const BUSD_BSC = new ERC20Token(
 )
 
 export const BUSD_TESTNET = new ERC20Token(
-  ChainId.BSC_TESTNET,
+  ChainId.SCROLL_TESTNET,
   '0xC72e15551717923a7a7A162F4771De96C6E6f546',
   18,
   'BUSD',
@@ -110,17 +110,17 @@ export const BUSD: Record<ChainId, ERC20Token> = {
   [ChainId.ETHEREUM]: BUSD_ETH,
   [ChainId.GOERLI]: BUSD_GOERLI,
   [ChainId.BSC]: BUSD_BSC,
-  [ChainId.BSC_TESTNET]: BUSD_TESTNET,
+  [ChainId.SCROLL_TESTNET]: BUSD_TESTNET,
 }
 
 export const CAKE = {
   [ChainId.BSC]: CAKE_MAINNET,
-  [ChainId.BSC_TESTNET]: CAKE_TESTNET,
+  [ChainId.SCROLL_TESTNET]: CAKE_TESTNET,
 }
 
 export const USDC = {
   [ChainId.BSC]: USDC_BSC,
-  [ChainId.BSC_TESTNET]: USDC_TESTNET,
+  [ChainId.SCROLL_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.GOERLI]: USDC_GOERLI,
 }

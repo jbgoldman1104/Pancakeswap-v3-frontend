@@ -26,6 +26,7 @@ const chainIdToNetwork: { [network: number]: string } = {
   80001: 'mumbai', // Polygon Testnet
   43114: 'avalanche', // Avalanche Mainnet
   43113: 'fuji', // Avalanche Testnet
+  534351: 'scroll-testnet'
 }
 
 export class BloctoConnector extends Connector<EthereumProviderInterface, { defaultChainId: number; appId?: string }> {

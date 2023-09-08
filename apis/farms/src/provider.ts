@@ -16,9 +16,10 @@ export const bscTestnetProvider = new StaticJsonRpcProvider(
   97,
 )
 
+/** Goldman */
 export const scrollTestnetProvider = new StaticJsonRpcProvider(
   {
-    url: 'https://scroll-sepolia.blockpi.network/v1/rpc/public',
+    url: 'https://sepolia-rpc.scroll.io',
     skipFetchSetup: true,
   },
   534351,

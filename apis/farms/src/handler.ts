@@ -41,15 +41,15 @@ const cakeBusdPairMap = {
     tokenA: CAKE[ChainId.BSC],
     tokenB: BUSD[ChainId.BSC],
   },
-  [ChainId.BSC_TESTNET]: {
-    address: Pair.getAddress(CAKE[ChainId.BSC_TESTNET], BUSD[ChainId.BSC_TESTNET]),
-    tokenA: CAKE[ChainId.BSC_TESTNET],
-    tokenB: BUSD[ChainId.BSC_TESTNET],
+  [ChainId.SCROLL_TESTNET]: {
+    address: Pair.getAddress(CAKE[ChainId.SCROLL_TESTNET], BUSD[ChainId.SCROLL_TESTNET]),
+    tokenA: CAKE[ChainId.SCROLL_TESTNET],
+    tokenB: BUSD[ChainId.SCROLL_TESTNET],
   },
 }
 
 const getCakePrice = async (isTestnet: boolean) => {
-  const pairConfig = cakeBusdPairMap[isTestnet ? ChainId.BSC_TESTNET : ChainId.BSC]
+  const pairConfig = cakeBusdPairMap[isTestnet ? ChainId.SCROLL_TESTNET : ChainId.BSC]
   const pairContract = new Contract(pairConfig.address, pairAbi, isTestnet ? scrollTestnetProvider : bscProvider)
   const reserves = await pairContract.getReserves()
   const { reserve0, reserve1 } = reserves

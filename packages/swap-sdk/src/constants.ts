@@ -5,7 +5,7 @@ export enum ChainId {
   ETHEREUM = 1,
   GOERLI = 5,
   BSC = 56,
-  BSC_TESTNET = 97,
+  SCROLL_TESTNET = 534351,
 }
 
 export const ZERO_PERCENT = new Percent('0')
@@ -19,7 +19,7 @@ export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
-  [ChainId.BSC_TESTNET]: '0xC74c504185322b5e699Ec079B06AbcbfC5a76755',
+  [ChainId.SCROLL_TESTNET]: '0xC74c504185322b5e699Ec079B06AbcbfC5a76755',
 }
 
 /** Goldman */
@@ -30,7 +30,7 @@ export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
-  [ChainId.BSC_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
+  [ChainId.SCROLL_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
 }
 
 export const WETH9 = {
@@ -69,8 +69,8 @@ export const WBNB = {
     'Wrapped BNB',
     'https://www.binance.org'
   ),
-  [ChainId.BSC_TESTNET]: new ERC20Token(
-    ChainId.BSC_TESTNET,
+  [ChainId.SCROLL_TESTNET]: new ERC20Token(
+    ChainId.SCROLL_TESTNET,
     '0x5300000000000000000000000000000000000004',
     18,
     'WETH',
@@ -83,7 +83,7 @@ export const WNATIVE: Record<number, ERC20Token> = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
-  [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
+  [ChainId.SCROLL_TESTNET]: WBNB[ChainId.SCROLL_TESTNET],
 }
 
 export const NATIVE: Record<
@@ -101,5 +101,5 @@ export const NATIVE: Record<
     symbol: 'BNB',
     decimals: 18,
   },
-  [ChainId.BSC_TESTNET]: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+  [ChainId.SCROLL_TESTNET]: { name: 'Ether', symbol: 'ETH', decimals: 18 },
 }
