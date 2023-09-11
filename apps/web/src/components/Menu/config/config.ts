@@ -11,6 +11,7 @@ import {
   NftFillIcon,
   MoreIcon,
   FarmIcon,
+  RocketIcon,
   DropdownMenuItems,
 } from '@pancakeswap/uikit'
 import { ContextApi } from '@pancakeswap/localization'
@@ -82,7 +83,14 @@ const config: (
       icon: TrophyIcon,
       fillIcon: TrophyFillIcon,
       showItemsOnMobile: false,
-      
+    },
+
+    {
+      label: 'SwapBoard',
+      href: '/leaderboard',
+      icon: RocketIcon,
+      fillIcon: RocketIcon,
+      showItemsOnMobile: false,
     },
     
   ].map((item) => addMenuItemSupported(item, chainId))

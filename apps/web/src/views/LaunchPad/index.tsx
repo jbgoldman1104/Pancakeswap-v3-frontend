@@ -1,9 +1,11 @@
 
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
-import { Button, Heading, Text, LogoIcon } from "@pancakeswap/uikit";
+import { Button, Heading, Text, LogoIcon, CardBody } from "@pancakeswap/uikit";
 import { useTranslation } from "@pancakeswap/localization";
 import Link from "next/link";
+import Page from '../Page'
+import { AppHeader, AppBody } from '../../components/App'
 
 const StyledNotFound = styled.div`
   align-items: center;
@@ -13,11 +15,16 @@ const StyledNotFound = styled.div`
   justify-content: center;
 `;
 
-const LaunchPad = ({ statusCode = 404 }: { statusCode?: number }) => {
+const Body = styled(CardBody)`
+  background-color: ${({ theme }) => theme.colors.dropdownDeep};
+`
+
+
+const LaunchPad = () => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <Page>
       <NextSeo title="LaunchPad" />
       <StyledNotFound>
         <LogoIcon width="64px" mb="8px" />
@@ -28,7 +35,7 @@ const LaunchPad = ({ statusCode = 404 }: { statusCode?: number }) => {
           </Button>
         </Link>
       </StyledNotFound>
-    </>
+    </Page>
   );
 };
 
