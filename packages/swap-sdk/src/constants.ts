@@ -19,7 +19,7 @@ export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
-  [ChainId.SCROLL_TESTNET]: '0xC74c504185322b5e699Ec079B06AbcbfC5a76755',
+  [ChainId.SCROLL_TESTNET]: '0x8f4d17a90d24E72aaa5b1CD51652551f1572d0c1',
 }
 
 /** Goldman */
@@ -30,7 +30,7 @@ export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
-  [ChainId.SCROLL_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
+  [ChainId.SCROLL_TESTNET]: '0xa5934690703a592a07e841ca29d5e5c79b5e22ed4749057bb216dc31100be1c0',
 }
 
 export const WETH9 = {
@@ -71,7 +71,7 @@ export const WBNB = {
   ),
   [ChainId.SCROLL_TESTNET]: new ERC20Token(
     ChainId.SCROLL_TESTNET,
-    '0x5300000000000000000000000000000000000004',
+    '0xfa6a407c4C49Ea1D46569c1A4Bcf71C3437bE54c',
     18,
     'WETH',
     'Wrapped Ether',
