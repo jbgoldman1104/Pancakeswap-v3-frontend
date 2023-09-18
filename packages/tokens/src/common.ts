@@ -18,6 +18,15 @@ export const CAKE_TESTNET = new ERC20Token(
   'https://www.zprotocol.xyz/',
 )
 
+export const CAKE_ZKSYNC = new ERC20Token(
+  ChainId.ZKSYNC_TESTNET,
+  '0x94dab55BA2bdC2357fD611de8cF0C5cbb23271D2',
+  18,
+  'ZKH',
+  'ZKHToken',
+  'https://www.zprotocol.xyz/',
+)
+
 export const USDC_BSC = new ERC20Token(
   ChainId.BSC,
   '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',

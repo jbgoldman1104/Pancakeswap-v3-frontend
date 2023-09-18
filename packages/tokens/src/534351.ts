@@ -1,8 +1,8 @@
-import { ChainId, ERC20Token, WBNB } from '@pancakeswap/sdk'
+import { ChainId, ERC20Token, WBNB, WETH9 } from '@pancakeswap/sdk'
 import { BUSD_TESTNET, CAKE_TESTNET } from './common'
 
 export const scrollTestnetTokens = {
-  wbnb: WBNB[ChainId.SCROLL_TESTNET],
+  weth: WETH9[ChainId.SCROLL_TESTNET],
   cake: CAKE_TESTNET,
   busd: BUSD_TESTNET,
   usdc: new ERC20Token(
