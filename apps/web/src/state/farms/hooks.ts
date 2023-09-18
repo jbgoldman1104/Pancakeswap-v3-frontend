@@ -73,13 +73,15 @@ export const usePollFarmsWithUserData = () => {
 }
 
 /**
+ * Goldman
  * Fetches the "core" farm data used globally
  * 2 = CAKE-BNB LP
  * 3 = BUSD-BNB LP
  */
 const coreFarmPIDs = {
   56: [2, 3],
-  534351: [4, 10],
+  534351: [],
+  280: [],
   5: [13, 11],
   1: [124, 125],
 }

@@ -5,6 +5,7 @@ export enum ChainId {
   ETHEREUM = 1,
   GOERLI = 5,
   BSC = 56,
+  ZKSYNC_TESTNET = 280,
   SCROLL_TESTNET = 534351,
 }
 
@@ -19,6 +20,7 @@ export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
+  [ChainId.ZKSYNC_TESTNET]: '0xb759D079984eFB28B0337a46F9aaFa70809dF0Da',
   [ChainId.SCROLL_TESTNET]: '0x8f4d17a90d24E72aaa5b1CD51652551f1572d0c1',
 }
 
@@ -30,6 +32,7 @@ export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
+  [ChainId.ZKSYNC_TESTNET]: '0xa5934690703a592a07e841ca29d5e5c79b5e22ed4749057bb216dc31100be1c0',
   [ChainId.SCROLL_TESTNET]: '0xa5934690703a592a07e841ca29d5e5c79b5e22ed4749057bb216dc31100be1c0',
 }
 
@@ -44,6 +47,22 @@ export const WETH9 = {
   ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
+    '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
+    18,
+    'WETH',
+    'Wrapped Ether',
+    'https://weth.io'
+  ),
+  [ChainId.ZKSYNC_TESTNET]: new ERC20Token(
+    ChainId.ZKSYNC_TESTNET,
+    '0x8C3e3f2983DB650727F3e05B7a7773e4D641537B',
+    18,
+    'WETH',
+    'Wrapped Ether',
+    'https://weth.io'
+  ),
+  [ChainId.SCROLL_TESTNET]: new ERC20Token(
+    ChainId.SCROLL_TESTNET,
     '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
     18,
     'WETH',
@@ -69,6 +88,14 @@ export const WBNB = {
     'Wrapped BNB',
     'https://www.binance.org'
   ),
+  [ChainId.ZKSYNC_TESTNET]: new ERC20Token(
+    ChainId.ZKSYNC_TESTNET,
+    '0x5A8CF42b7810620576847D2c32a91053d2400370',
+    18,
+    'WETH',
+    'Wrapped Ether',
+    'https://weth.io'
+  ),
   [ChainId.SCROLL_TESTNET]: new ERC20Token(
     ChainId.SCROLL_TESTNET,
     '0xfa6a407c4C49Ea1D46569c1A4Bcf71C3437bE54c',
@@ -83,7 +110,8 @@ export const WNATIVE: Record<number, ERC20Token> = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
-  [ChainId.SCROLL_TESTNET]: WBNB[ChainId.SCROLL_TESTNET],
+  [ChainId.SCROLL_TESTNET]: WETH9[ChainId.SCROLL_TESTNET],
+  [ChainId.ZKSYNC_TESTNET]: WETH9[ChainId.ZKSYNC_TESTNET],
 }
 
 export const NATIVE: Record<
@@ -101,5 +129,6 @@ export const NATIVE: Record<
     symbol: 'BNB',
     decimals: 18,
   },
+  [ChainId.ZKSYNC_TESTNET]: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   [ChainId.SCROLL_TESTNET]: { name: 'Ether', symbol: 'ETH', decimals: 18 },
 }

@@ -1,7 +1,7 @@
 import { BinanceWalletConnector } from '@pancakeswap/wagmi/connectors/binanceWallet'
 import { BloctoConnector } from '@pancakeswap/wagmi/connectors/blocto'
 import { TrustWalletConnector } from '@pancakeswap/wagmi/connectors/trustWallet'
-import { bsc, goerli, mainnet, Chain } from 'wagmi/chains'
+import { bsc, goerli, mainnet, zkSyncTestnet, Chain } from 'wagmi/chains'
 import { configureChains, createClient } from 'wagmi'
 import memoize from 'lodash/memoize'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
@@ -37,7 +37,10 @@ const scrollTestnet:Chain = {
   testnet: true
 }
 
-const CHAINS = [bsc, mainnet, goerli, scrollTestnet]
+// Goldman 
+const CHAINS = [scrollTestnet, zkSyncTestnet]
+
+// const CHAINS = [scrollTestnet, zkSyncTestnet]
 
 const getNodeRealUrl = (networkName: string) => {
   let host = null
@@ -82,6 +85,8 @@ export const { provider, chains } = configureChains(CHAINS, [
     },
   }),
 ])
+
+console.log(chains)
 
 export const injectedConnector = new InjectedConnector({
   chains,
