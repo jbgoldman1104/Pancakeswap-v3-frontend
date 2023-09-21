@@ -1,12 +1,13 @@
 import { ChainId, JSBI, Percent, Token, WNATIVE } from '@pancakeswap/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
-import { bscTokens, scrollTestnetTokens, USDC, USDT, BUSD, WBTC_ETH } from '@pancakeswap/tokens'
+import { bscTokens, scrollTestnetTokens, zksyncTestnetTokens,  USDC, USDT, BUSD, WBTC_ETH } from '@pancakeswap/tokens'
 import { ChainMap, ChainTokenList } from './types'
 
 export const ROUTER_ADDRESS: ChainMap<string> = {
   [ChainId.ETHEREUM]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.GOERLI]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.BSC]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
+  [ChainId.ZKSYNC_TESTNET]: '0x74D3A53E293390AFBfD53864c15D0538ae0BE889',
   [ChainId.SCROLL_TESTNET]: '0x021e9692bE4Ca2BA2ecdB44CaA3DA54daEF3183e',
 }
 
@@ -23,7 +24,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     bscTokens.eth,
     bscTokens.usdc,
   ],
-  [ChainId.SCROLL_TESTNET]: [scrollTestnetTokens.wbnb, scrollTestnetTokens.cake, scrollTestnetTokens.busd],
+  [ChainId.ZKSYNC_TESTNET]: [zksyncTestnetTokens.weth, zksyncTestnetTokens.cake, zksyncTestnetTokens.usdt],
+  [ChainId.SCROLL_TESTNET]: [scrollTestnetTokens.weth, scrollTestnetTokens.cake, scrollTestnetTokens.usdt],
 }
 
 /**
@@ -53,7 +55,8 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.usdt, bscTokens.cake, bscTokens.btcb],
-  [ChainId.SCROLL_TESTNET]: [scrollTestnetTokens.wbnb, scrollTestnetTokens.cake, scrollTestnetTokens.busd],
+  [ChainId.ZKSYNC_TESTNET]: [zksyncTestnetTokens.weth, zksyncTestnetTokens.cake, zksyncTestnetTokens.usdt],
+  [ChainId.SCROLL_TESTNET]: [scrollTestnetTokens.weth, scrollTestnetTokens.cake, scrollTestnetTokens.usdt],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -61,7 +64,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.wbnb, bscTokens.dai, bscTokens.busd, bscTokens.usdt, bscTokens.cake],
-  [ChainId.SCROLL_TESTNET]: [scrollTestnetTokens.wbnb, scrollTestnetTokens.cake, scrollTestnetTokens.busd],
+  [ChainId.ZKSYNC_TESTNET]: [zksyncTestnetTokens.weth, zksyncTestnetTokens.cake, zksyncTestnetTokens.usdt],
+  [ChainId.SCROLL_TESTNET]: [scrollTestnetTokens.weth, scrollTestnetTokens.cake, scrollTestnetTokens.usdt],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {

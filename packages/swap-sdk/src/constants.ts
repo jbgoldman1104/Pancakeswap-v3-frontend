@@ -63,7 +63,7 @@ export const WETH9 = {
   ),
   [ChainId.SCROLL_TESTNET]: new ERC20Token(
     ChainId.SCROLL_TESTNET,
-    '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
+    '0x5300000000000000000000000000000000000004',
     18,
     'WETH',
     'Wrapped Ether',

@@ -11,7 +11,7 @@ export const CAKE_MAINNET = new ERC20Token(
 
 export const CAKE_TESTNET = new ERC20Token(
   ChainId.SCROLL_TESTNET,
-  '0xf9D930B82807434702856eA3ee19Ac7D5E2Aa76d',
+  '0x6542F0f0831dCF256ceb1bd2b4E4A2C52bA3e707',
   18,
   'ZKH',
   'ZKHToken',
@@ -20,7 +20,7 @@ export const CAKE_TESTNET = new ERC20Token(
 
 export const CAKE_ZKSYNC = new ERC20Token(
   ChainId.ZKSYNC_TESTNET,
-  '0x94dab55BA2bdC2357fD611de8cF0C5cbb23271D2',
+  '0xbD424eDa9aE7fB38cF30b235Ff2bB31E2d55E1BF',
   18,
   'ZKH',
   'ZKHToken',
@@ -79,6 +79,26 @@ export const USDT_ETH = new ERC20Token(
   'https://tether.to/',
 )
 
+export const USDT_SCROLL_TESTNET = new ERC20Token(
+  ChainId.SCROLL_TESTNET,
+  '0x551197e6350936976DfFB66B2c3bb15DDB723250',
+  6,
+  'USDT',
+  'Tether USD',
+  'https://tether.to/',
+)
+
+export const USDT_ZKSYNC_TESTNET = new ERC20Token(
+  ChainId.ZKSYNC_TESTNET,
+  '0xfcEd12dEbc831D3a84931c63687C395837D42c2B',
+  6,
+  'USDT',
+  'Tether USD',
+  'https://tether.to/',
+)
+
+
+
 export const BUSD_BSC = new ERC20Token(
   ChainId.BSC,
   '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
@@ -91,6 +111,15 @@ export const BUSD_BSC = new ERC20Token(
 export const BUSD_TESTNET = new ERC20Token(
   ChainId.SCROLL_TESTNET,
   '0xC72e15551717923a7a7A162F4771De96C6E6f546',
+  18,
+  'BUSD',
+  'Binance USD',
+  'https://www.paxos.com/busd/',
+)
+
+export const BUSD_ZKSYNC_TESTNET = new ERC20Token(
+  ChainId.ZKSYNC_TESTNET,
+  '0x108F6704bEc2E7E57f35b9Bbd575CB20cBB45d8A',
   18,
   'BUSD',
   'Binance USD',
@@ -115,21 +144,20 @@ export const BUSD_GOERLI = new ERC20Token(
   'https://www.paxos.com/busd/',
 )
 
-export const BUSD: Record<ChainId, ERC20Token> = {
+export const BUSD = {
   [ChainId.ETHEREUM]: BUSD_ETH,
   [ChainId.GOERLI]: BUSD_GOERLI,
   [ChainId.BSC]: BUSD_BSC,
-  [ChainId.SCROLL_TESTNET]: BUSD_TESTNET,
 }
 
 export const CAKE = {
   [ChainId.BSC]: CAKE_MAINNET,
   [ChainId.SCROLL_TESTNET]: CAKE_TESTNET,
+  [ChainId.ZKSYNC_TESTNET]: CAKE_ZKSYNC,
 }
 
 export const USDC = {
   [ChainId.BSC]: USDC_BSC,
-  [ChainId.SCROLL_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.GOERLI]: USDC_GOERLI,
 }
@@ -137,6 +165,8 @@ export const USDC = {
 export const USDT = {
 [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
+  [ChainId.SCROLL_TESTNET]: USDT_SCROLL_TESTNET,
+  [ChainId.ZKSYNC_TESTNET]: USDT_ZKSYNC_TESTNET,
 }
 
 export const WBTC_ETH = new ERC20Token(

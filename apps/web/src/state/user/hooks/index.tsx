@@ -417,7 +417,7 @@ export function useFeeDataWithGasPrice(chainIdOverride?: number): {
   const gasPrice = useGasPrice(chainId)
   const { data } = useFeeData({
     chainId,
-    enabled: chainId !== ChainId.BSC && chainId !== ChainId.SCROLL_TESTNET,
+    enabled: chainId !== ChainId.BSC && chainId !== ChainId.SCROLL_TESTNET && chainId !== ChainId.ZKSYNC_TESTNET,
     watch: true,
   })
 
@@ -459,7 +459,7 @@ export function useGasPrice(chainIdOverride?: number): string | undefined {
   if (chainId === ChainId.BSC) {
     return userGas === GAS_PRICE_GWEI.rpcDefault ? bscProviderGasPrice : userGas
   }
-  if (chainId === ChainId.SCROLL_TESTNET) {
+  if (chainId === ChainId.SCROLL_TESTNET || chainId == ChainId.ZKSYNC_TESTNET) {
     return GAS_PRICE_GWEI.testnet
   }
   return undefined

@@ -1,7 +1,7 @@
 import { BinanceWalletConnector } from '@pancakeswap/wagmi/connectors/binanceWallet'
 import { BloctoConnector } from '@pancakeswap/wagmi/connectors/blocto'
 import { TrustWalletConnector } from '@pancakeswap/wagmi/connectors/trustWallet'
-import { bsc, goerli, mainnet, zkSyncTestnet, Chain } from 'wagmi/chains'
+import { bsc, goerli, mainnet, Chain } from 'wagmi/chains'
 import { configureChains, createClient } from 'wagmi'
 import memoize from 'lodash/memoize'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
@@ -32,6 +32,31 @@ const scrollTestnet:Chain = {
     default: {
       name: 'blockscout',
       url:'https://sepolia-blockscout.scroll.io'
+    }
+  },
+  testnet: true
+}
+
+
+const zkSyncTestnet:Chain = {
+  id: 280,
+  name: 'ZKSync Testnet',
+  network: 'zksync-testnet',
+  nativeCurrency: {
+    name: 'ETH',
+    symbol: 'ETH',
+    decimals: 18
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://testnet.era.zksync.dev'],
+      webSocket: ['wss://testnet.era.zksync.dev']
+    }
+  },
+  blockExplorers: {
+    default: {
+      name: 'blockscout',
+      url:'https://zksync2-testnet.zkscan.io'
     }
   },
   testnet: true

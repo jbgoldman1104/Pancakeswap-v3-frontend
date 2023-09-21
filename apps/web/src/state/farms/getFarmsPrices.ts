@@ -143,4 +143,9 @@ const nativeStableLpMap = {
     wNative: 'WETH',
     stable: 'BUSD',
   },
+  [ChainId.ZKSYNC_TESTNET]: {
+    address: '0x8C3e3f2983DB650727F3e05B7a7773e4D641537B',
+    wNative: 'WETH',
+    stable: 'BUSD',
+  },
 }

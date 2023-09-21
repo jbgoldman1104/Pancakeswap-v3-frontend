@@ -36,8 +36,11 @@ interface ImportProps {
 }
 
 /** Goldman */
-const getStandard = (chainId: ChainId) =>
-  chainId !== ChainId.BSC && chainId !== ChainId.SCROLL_TESTNET ? 'ERC20' : 'BEP20'
+const getStandard = (chainId: ChainId) => {
+  //chainId !== ChainId.BSC && chainId !== ChainId.SCROLL_TESTNET ? 'ERC20' : 'BEP20'
+  return 'ERC20'
+}
+
 
 function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
   const { chainId } = useActiveChainId()

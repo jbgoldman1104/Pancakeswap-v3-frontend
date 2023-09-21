@@ -7,7 +7,7 @@ import { BUSD, CAKE } from '@pancakeswap/tokens'
 import { farmFetcher } from './helper'
 import { FarmKV, FarmResult } from './kv'
 import { updateLPsAPR } from './lpApr'
-import { bscProvider, scrollTestnetProvider } from './provider'
+import { bscProvider, scrollTestnetProvider, zksyncTestnetProvider } from './provider'
 
 const pairAbi = [
   {
@@ -46,11 +46,17 @@ const cakeBusdPairMap = {
     tokenA: CAKE[ChainId.SCROLL_TESTNET],
     tokenB: BUSD[ChainId.SCROLL_TESTNET],
   },
+  [ChainId.ZKSYNC_TESTNET]: {
+    address: Pair.getAddress(CAKE[ChainId.ZKSYNC_TESTNET], BUSD[ChainId.ZKSYNC_TESTNET]),
+    tokenA: CAKE[ChainId.ZKSYNC_TESTNET],
+    tokenB: BUSD[ChainId.ZKSYNC_TESTNET],
+  },
 }
 
-const getCakePrice = async (isTestnet: boolean) => {
-  const pairConfig = cakeBusdPairMap[isTestnet ? ChainId.SCROLL_TESTNET : ChainId.BSC]
-  const pairContract = new Contract(pairConfig.address, pairAbi, isTestnet ? scrollTestnetProvider : bscProvider)
+// Goldman
+const getCakePrice = async (chainId: number) => {
+  const pairConfig = cakeBusdPairMap[chainId == ChainId.SCROLL_TESTNET ? ChainId.SCROLL_TESTNET : ChainId.ZKSYNC_TESTNET ]
+  const pairContract = new Contract(pairConfig.address, pairAbi, chainId == ChainId.SCROLL_TESTNET ?scrollTestnetProvider : zksyncTestnetProvider)
   const reserves = await pairContract.getReserves()
   const { reserve0, reserve1 } = reserves
   const { tokenA, tokenB } = pairConfig
@@ -89,7 +95,7 @@ export async function saveFarms(chainId: number, event: ScheduledEvent | FetchEv
       farms: farmsConfig.filter((f) => f.pid !== 0).concat(lpPriceHelpers),
     })
 
-    const cakeBusdPrice = await getCakePrice(isTestnet)
+    const cakeBusdPrice = await getCakePrice(chainId)
     const lpAprs = await handleLpAprs(chainId, farmsConfig)
 
     const finalFarm = farmsWithPrice.map((f) => {

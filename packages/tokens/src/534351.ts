@@ -1,5 +1,5 @@
 import { ChainId, ERC20Token, WBNB, WETH9 } from '@pancakeswap/sdk'
-import { BUSD_TESTNET, CAKE_TESTNET } from './common'
+import { BUSD_TESTNET, CAKE_TESTNET, USDT_SCROLL_TESTNET } from './common'
 
 export const scrollTestnetTokens = {
   weth: WETH9[ChainId.SCROLL_TESTNET],
@@ -12,5 +12,5 @@ export const scrollTestnetTokens = {
     'USDC',
     'USD Coin',
   ),
-  usdt: new ERC20Token(ChainId.SCROLL_TESTNET, '0x551197e6350936976DfFB66B2c3bb15DDB723250', 18, 'USDT', 'Tether USD'),
+  usdt: USDT_SCROLL_TESTNET,
 }

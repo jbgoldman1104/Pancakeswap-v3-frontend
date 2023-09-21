@@ -15,6 +15,7 @@ export const SMART_ROUTER_ADDRESS: ChainMap<string> = {
   [ChainId.GOERLI]: '',
   [ChainId.BSC]: '0x64D74e1EAAe3176744b5767b93B7Bee39Cf7898F',
   [ChainId.SCROLL_TESTNET]: '0x021e9692bE4Ca2BA2ecdB44CaA3DA54daEF3183e',
+  [ChainId.ZKSYNC_TESTNET]: '0x74D3A53E293390AFBfD53864c15D0538ae0BE889',
 }
 
 export function useSmartRouterContract() {

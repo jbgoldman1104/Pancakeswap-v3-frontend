@@ -1,5 +1,5 @@
 import { ChainId, ERC20Token, WBNB, WETH9 } from '@pancakeswap/sdk'
-import { BUSD_TESTNET, CAKE_TESTNET, CAKE_ZKSYNC } from './common'
+import { BUSD_TESTNET, CAKE_TESTNET, CAKE_ZKSYNC, USDT_ZKSYNC_TESTNET } from './common'
 
 export const zksyncTestnetTokens = {
   weth: WETH9[ChainId.ZKSYNC_TESTNET],
@@ -11,5 +11,5 @@ export const zksyncTestnetTokens = {
     'USDC',
     'USD Coin',
   ),
-  usdt: new ERC20Token(ChainId.ZKSYNC_TESTNET, '0xfcEd12dEbc831D3a84931c63687C395837D42c2B', 18, 'USDT', 'Tether USD'),
+  usdt: USDT_ZKSYNC_TESTNET,
 }

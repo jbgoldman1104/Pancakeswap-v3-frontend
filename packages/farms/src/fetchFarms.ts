@@ -28,6 +28,11 @@ const evmNativeStableLpMap = {
   },
   [ChainId.SCROLL_TESTNET]: {
     address: '0x4E96D2e92680Ca65D58A0e2eB5bd1c0f44cAB897',
+    wNative: 'WETH',
+    stable: 'BUSD',
+  },
+  [ChainId.ZKSYNC_TESTNET]: {
+    address: '0x8C3e3f2983DB650727F3e05B7a7773e4D641537B',
     wNative: 'WBNB',
     stable: 'BUSD',
   },
@@ -188,7 +193,7 @@ export const fetchMasterChefData = async (
     const masterChefMultiCallResult = await multicallv2({
       abi: masterChefV2Abi,
       calls: masterChefAggregatedCalls,
-      chainId: isTestnet ? ChainId.SCROLL_TESTNET : ChainId.BSC,
+      chainId: isTestnet ? ChainId.SCROLL_TESTNET : ChainId.ZKSYNC_TESTNET,
     })
 
     let masterChefChunkedResultCounter = 0
@@ -239,7 +244,7 @@ export const fetchMasterChefV2Data = async ({
           params: [true],
         },
       ],
-      chainId: isTestnet ? ChainId.SCROLL_TESTNET : ChainId.BSC,
+      chainId: isTestnet ? ChainId.SCROLL_TESTNET : ChainId.ZKSYNC_TESTNET,
     })
 
     return {

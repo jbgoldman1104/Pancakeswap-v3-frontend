@@ -32,7 +32,7 @@ export function UnsupportedNetworkModal({ pageSupportedChains }: { pageSupported
   }, [menuItems, pathname])
 
   const supportedMainnetChains = useMemo(
-    () => chains.filter((chain) => !chain.testnet && pageSupportedChains?.includes(chain.id)),
+    () => chains.filter((chain) => pageSupportedChains?.includes(chain.id)),
     [chains, pageSupportedChains],
   )
 
@@ -62,7 +62,7 @@ export function UnsupportedNetworkModal({ pageSupportedChains }: { pageSupported
               if (supportedMainnetChains.map((c) => c.id).includes(chainId)) {
                 switchNetworkAsync(chainId)
               } else {
-                switchNetworkAsync(ChainId.BSC)
+                switchNetworkAsync(ChainId.SCROLL_TESTNET)
               }
             }}
           >
@@ -78,7 +78,7 @@ export function UnsupportedNetworkModal({ pageSupportedChains }: { pageSupported
             variant="secondary"
             onClick={() =>
               logout().then(() => {
-                switchNetworkLocal(ChainId.BSC)
+                switchNetworkLocal(ChainId.SCROLL_TESTNET)
               })
             }
           >
