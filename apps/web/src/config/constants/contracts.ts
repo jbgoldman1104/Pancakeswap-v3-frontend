@@ -2,7 +2,7 @@ import { multicallAddresses } from '@pancakeswap/multicall'
 
 export default {
   masterChef: {
-    534351: '0x63BE9a6A1062E100d10aDe7FDf9d404AD81A2C9d',
+    534351: '0x5194E09281cBA53404ADdD4A21083EAA4BE70741',
     280: '0x6013D7602b0EDcb7Ff188214301952B24019De54',
     56: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
   },

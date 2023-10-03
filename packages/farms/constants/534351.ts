@@ -6,52 +6,36 @@ const farms: SerializedFarmConfig[] = [
    * These 3 farms (PID 0, 2, 3) should always be at the top of the file.
    * Goldman Todo
    */
-  // {
-  //   pid: 0,
-  //   lpSymbol: 'CAKE',
-  //   lpAddress: '0x36e3E4fF6471559b19F66bD10985534d5e214D44',
-  //   token: scrollTestnetTokens.syrup,
-  //   quoteToken: scrollTestnetTokens.wbnb,
-  // },
-  // {
-  //   pid: 3,
-  //   lpSymbol: 'BUSD-CAKE LP',
-  //   lpAddress: '0xb98C30fA9f5e9cf6749B7021b4DDc0DBFe73b73e',
-  //   token: scrollTestnetTokens.busd,
-  //   quoteToken: scrollTestnetTokens.cake,
-  // },
-  // {
-  //   pid: 4,
-  //   lpSymbol: 'CAKE-BNB LP',
-  //   lpAddress: '0xa96818CA65B57bEc2155Ba5c81a70151f63300CD',
-  //   token: scrollTestnetTokens.cake,
-  //   quoteToken: scrollTestnetTokens.wbnb,
-  // },
-  // {
-  //   pid: 10,
-  //   lpSymbol: 'BNB-BUSD LP',
-  //   lpAddress: '0x4E96D2e92680Ca65D58A0e2eB5bd1c0f44cAB897',
-  //   token: scrollTestnetTokens.wbnb,
-  //   quoteToken: scrollTestnetTokens.busd,
-  // },
-  // {
-  //   pid: 9,
-  //   lpSymbol: 'BUSD-USDC LP',
-  //   lpAddress: '0x7CA885d338462790DD1B5416ebe6bec75ee045a1',
-  //   token: scrollTestnetTokens.mockBusd, // coins[0]
-  //   quoteToken: scrollTestnetTokens.usdc, // coins[1]
-  //   stableSwapAddress: '0xd5E56CD4c8111643a94Ee084df31F44055a1EC9F',
-  //   infoStableSwapAddress: '0xaE6C14AAA753B3FCaB96149e1E10Bc4EDF39F546',
-  // },
-  // {
-  //   pid: 11,
-  //   lpSymbol: 'USDT-BUSD LP',
-  //   lpAddress: '0x9Fa2Ef2C3dF6F903F4b73047311e861C51a11B60',
-  //   token: scrollTestnetTokens.usdt, // coins[0]
-  //   quoteToken: scrollTestnetTokens.mockBusd, // coins[1]
-  //   stableSwapAddress: '0xc418d68751Cbe0407C8fdd90Cde73cE95b892f39',
-  //   infoStableSwapAddress: '0xaE6C14AAA753B3FCaB96149e1E10Bc4EDF39F546',
-  // },
+  {
+    pid: 0,
+    lpSymbol: 'ZTK',
+    lpAddress: '0x6542F0f0831dCF256ceb1bd2b4E4A2C52bA3e707',
+    token: scrollTestnetTokens.syrup,
+    quoteToken: scrollTestnetTokens.weth,
+  },
+  {
+    pid: 1,
+    lpSymbol: 'ZTK-ETH LP',
+    lpAddress: '0xf3efe666bBa17ea547Cb856BfFfAB4b0af6bDf96',
+    token: scrollTestnetTokens.cake,
+    quoteToken: scrollTestnetTokens.weth,
+  },
+
+  {
+    pid: 2,
+    lpSymbol: 'ZKH-ETH LP',
+    lpAddress: '0x5B17951be7e9388e034bf56a111577e79A546e1C',
+    token: scrollTestnetTokens.zkh,
+    quoteToken: scrollTestnetTokens.weth,
+  },
+  {
+    pid: 3,
+    lpSymbol: 'GOLD-ZKH LP',
+    lpAddress: '0x3244BA514FEe2F28Ce5F3E86fbaE7bD1c28e1B7e',
+    token: scrollTestnetTokens.gold,
+    quoteToken: scrollTestnetTokens.zkh,
+  },
+  
 ].map((p) => ({ ...p, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
 
 export default farms

@@ -3,7 +3,7 @@ import { Pool } from '@pancakeswap/uikit'
 import { SerializedWrappedToken } from '@pancakeswap/token-lists'
 import Trans from 'components/Trans'
 import { VaultKey } from 'state/types'
-import { bscTokens } from '@pancakeswap/tokens'
+import { bscTokens, scrollTestnetTokens } from '@pancakeswap/tokens'
 import { PoolCategory } from './types'
 
 export const MAX_LOCK_DURATION = 31536000
@@ -58,10 +58,10 @@ export const vaultPoolConfig = {
 export const livePools: Pool.SerializedPoolConfig<SerializedWrappedToken>[] = [
   {
     sousId: 0,
-    stakingToken: bscTokens.cake,
-    earningToken: bscTokens.cake,
+    stakingToken: scrollTestnetTokens.cake,
+    earningToken: scrollTestnetTokens.cake,
     contractAddress: {
-      534351: '0xB4A466911556e39210a6bB2FaECBB59E4eB7E43d',
+      534351: '0x5194E09281cBA53404ADdD4A21083EAA4BE70741',
       280:'',
       56: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
     },

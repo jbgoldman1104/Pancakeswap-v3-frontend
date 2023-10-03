@@ -4,6 +4,7 @@ import { createMulticall, Call } from '@pancakeswap/multicall'
 
 import { wrappedCurrency } from '../utils/currency'
 import IPancakePairABI from '../abis/IPancakePair.json'
+import IPancakeFactoryABI from '../abis/IPancakeFactory.json'
 import { Provider } from '../types'
 
 type CurrencyPair = [Currency, Currency]

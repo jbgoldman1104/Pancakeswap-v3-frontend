@@ -12,5 +12,26 @@ export const scrollTestnetTokens = {
     'USDC',
     'USD Coin',
   ),
+  gold: new ERC20Token(
+    ChainId.SCROLL_TESTNET,
+    '0x2F6D1FEF02c9cF2d1febF951a2110b325166BC4F',
+    18,
+    'GOLD',
+    'Gold Token',
+  ),
+  syrup: new ERC20Token(
+    ChainId.SCROLL_TESTNET,
+    '0x81ddaED1A0f48fB9b72Cbb6D41B9A6C82c19541F',
+    18,
+    'ZST',
+    'ZProtocol SyrupBar Token',
+  ),
+  zkh: new ERC20Token(
+    ChainId.SCROLL_TESTNET,
+    '0x64785543342904592be6A3eD0afa2f4036e81ae8',
+    18,
+    'ZKH',
+    'ZProtocol Harvest',
+  ),
   usdt: USDT_SCROLL_TESTNET,
 }

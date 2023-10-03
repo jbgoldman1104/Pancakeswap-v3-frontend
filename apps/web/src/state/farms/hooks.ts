@@ -80,7 +80,7 @@ export const usePollFarmsWithUserData = () => {
  */
 const coreFarmPIDs = {
   56: [2, 3],
-  534351: [],
+  534351: [0],
   280: [],
   5: [13, 11],
   1: [124, 125],

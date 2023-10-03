@@ -32,8 +32,8 @@ export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
-  [ChainId.ZKSYNC_TESTNET]: '0xa5934690703a592a07e841ca29d5e5c79b5e22ed4749057bb216dc31100be1c0',
   [ChainId.SCROLL_TESTNET]: '0xa5934690703a592a07e841ca29d5e5c79b5e22ed4749057bb216dc31100be1c0',
+  [ChainId.ZKSYNC_TESTNET]: '0xceafc2cb2d29cd60d98d15d920cef27c8e99ec7fc9abc76878186e3b7db6549f',
 }
 
 export const WETH9 = {
@@ -63,7 +63,7 @@ export const WETH9 = {
   ),
   [ChainId.SCROLL_TESTNET]: new ERC20Token(
     ChainId.SCROLL_TESTNET,
-    '0x5300000000000000000000000000000000000004',
+    '0xfa6a407c4C49Ea1D46569c1A4Bcf71C3437bE54c',
     18,
     'WETH',
     'Wrapped Ether',

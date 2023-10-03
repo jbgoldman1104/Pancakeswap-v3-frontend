@@ -13,8 +13,8 @@ export const CAKE_TESTNET = new ERC20Token(
   ChainId.SCROLL_TESTNET,
   '0x6542F0f0831dCF256ceb1bd2b4E4A2C52bA3e707',
   18,
-  'ZKH',
-  'ZKHToken',
+  'ZTK',
+  'ZProtocol Token',
   'https://www.zprotocol.xyz/',
 )
 

@@ -24,7 +24,7 @@ const WEEKS_IN_A_YEAR = 52.1429
 const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.BSC]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks',
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
-  [ChainId.SCROLL_TESTNET]: '',
+  [ChainId.SCROLL_TESTNET]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
   [ChainId.ZKSYNC_TESTNET]: '',
   [ChainId.GOERLI]: '',
 }
@@ -32,7 +32,7 @@ const BLOCKS_CLIENT_WITH_CHAIN = {
 const INFO_CLIENT_WITH_CHAIN = {
   [ChainId.BSC]: 'https://proxy-worker.pancake-swap.workers.dev/bsc-exchange',
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
-  [ChainId.SCROLL_TESTNET]: '',
+  [ChainId.SCROLL_TESTNET]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
   [ChainId.ZKSYNC_TESTNET]: '',
   [ChainId.GOERLI]: '',
 }
