@@ -72,20 +72,21 @@ export const FarmTypesFilter: React.FC<FarmTypesFilterProps> = ({
         <Box ref={wrapperRef}>
           <InlineMenu
             component={
-              <Button onClick={handleMenuClick} variant="light" scale="sm">
-                {t('Farm Types')}
-                {farmTypesEnableCount > 0 && `(${farmTypesEnableCount})`}
-              </Button>
+              // <Button onClick={handleMenuClick} variant="light" scale="sm">
+              //   {t('Farm Types')}
+              //   {farmTypesEnableCount > 0 && `(${farmTypesEnableCount})`}
+              // </Button>
+              <></>
             }
             isOpen={isOpen}
             options={{ placement: 'top' }}
           >
             <Box width={['100%', '345px']} ref={menuRef}>
-              <FarmTypesWrapper alignItems="center" p="16px">
+              {/* <FarmTypesWrapper alignItems="center" p="16px">
                 <Text fontSize={20} bold color="text" display="inline-block" ml="8px">
                   {t('Farm Types')}
                 </Text>
-              </FarmTypesWrapper>
+              </FarmTypesWrapper> */}
               <Box height="240px" overflowY="auto">
                 <StyledItemRow alignItems="center" px="16px" py="8px" ml="8px" mt="8px">
                   <RocketIcon />

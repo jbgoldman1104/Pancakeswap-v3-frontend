@@ -385,8 +385,8 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
             <Flex mt="20px">
               <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
             </Flex>
-            <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
-            <Flex mt="20px" ml="16px">
+            {/* <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} /> */}
+            {/* <Flex mt="20px" ml="16px">
               <FarmTypesFilter
                 boostedOnly={boostedOnly}
                 handleSetBoostedOnly={setBoostedOnly}
@@ -404,7 +404,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 />
                 <Text> {t('Staked only')}</Text>
               </ToggleWrapper>
-            </Flex>
+            </Flex> */}
           </ViewControls>
           <FilterContainer>
             <LabelWrapper>

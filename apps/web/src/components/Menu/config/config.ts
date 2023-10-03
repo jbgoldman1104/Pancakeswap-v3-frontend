@@ -55,28 +55,37 @@ const config: (
       label: t('Liquidity'),
       href: '/liquidity',
       showItemsOnMobile: false,
+      icon: EarnIcon,
+      fillIcon: EarnFillIcon
+
+    },
+    {
+      label: t('Farms'),
+      href: '/farms',
+      showItemsOnMobile: false,
       icon: FarmIcon,
       fillIcon: FarmIcon
 
     },
-    {
-      label: t('Earn'),
-      href: '/farms',
-      icon: EarnIcon,
-      fillIcon: EarnFillIcon,
-      image: '/images/decorations/pe2.png',
-      items: [
-        {
-          label: t('Farms'),
-          href: '/farms',
-        },
-        {
-          label: t('Pools'),
-          href: '/pools',
-          supportChainIds: SUPPORT_ONLY_BSC,
-        },
-      ].map((item) => addMenuItemSupported(item, chainId)),
-    },
+    
+    // {
+    //   label: t('Earn'),
+    //   href: '/farms',
+    //   icon: EarnIcon,
+    //   fillIcon: EarnFillIcon,
+    //   image: '/images/decorations/pe2.png',
+    //   items: [
+    //     {
+    //       label: t('Farms'),
+    //       href: '/farms',
+    //     },
+    //     {
+    //       label: t('Pools'),
+    //       href: '/pools',
+    //       supportChainIds: SUPPORT_ONLY_BSC,
+    //     },
+    //   ].map((item) => addMenuItemSupported(item, chainId)),
+    // },
     {
       label: 'LaunchPad',
       href: '/launchpad',
