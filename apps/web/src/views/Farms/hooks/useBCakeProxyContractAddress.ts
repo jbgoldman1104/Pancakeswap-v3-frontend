@@ -11,7 +11,7 @@ export const useBCakeProxyContractAddress = (account?: string, chainId?: number)
     account && isSupportedChain && ['bProxyAddress', account, chainId],
     async () => bCakeFarmBoosterContract.proxyContract(account),
   )
-  const isLoading = isSupportedChain ? status !== FetchStatus.Fetched : false
+  const isLoading = false;//isSupportedChain ? status !== FetchStatus.Fetched : false
 
   return {
     proxyAddress: data,

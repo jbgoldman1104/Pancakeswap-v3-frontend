@@ -155,11 +155,13 @@ export default {
     56: '0xE6c904424417D03451fADd6E3f5b6c26BcC43841', // Only for pass contracts test
     1: '0x2e71B2688019ebdFDdE5A45e6921aaebb15b25fb',
     5: '0xE6c904424417D03451fADd6E3f5b6c26BcC43841',
+    534351: '',
   },
   crossFarmingSender: {
     56: '0x327d26dE30f92600620A99043034e0A5FD9402C8', // Only for pass contracts test
     1: '0x8EA90Ef07f37c77137453C7A1B72B7886d51eCFb',
     5: '0x327d26dE30f92600620A99043034e0A5FD9402C8',
+    534351: '',
   },
   crossFarmingReceiver: {
     56: '0x0726a8C8206b9eC0AfB788df5adb36a8AEDB13c2',
@@ -169,5 +171,6 @@ export default {
     1: '0x9Ca2A439810524250E543BA8fB6E88578aF242BC',
     5: '0x7bb894Ca487568dD55054193c3238d7B1f46BB92',
     56: '0xfEACb05b373f1A08E68235bA7FC92636b92ced01',
+    534351: '',
   },
 }
