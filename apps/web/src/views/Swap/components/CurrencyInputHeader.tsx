@@ -98,7 +98,8 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
   }
   const [onPresentTransactionsModal] = useModal(<TransactionsModal />)
   const handleOnClick = useCallback(() => onRefreshPrice?.(), [onRefreshPrice])
-  const [isSwapHotTokenDisplay, setIsSwapHotTokenDisplay] = useSwapHotTokenDisplay()
+  // const [isSwapHotTokenDisplay, setIsSwapHotTokenDisplay] = useSwapHotTokenDisplay()
+  const isSwapHotTokenDisplay = false;
 
   const mobileTooltipClickOutside = useCallback(() => {
     setMobileTooltipShow(false)
@@ -127,11 +128,11 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
         <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
       </Flex>
       <Flex width="100%" justifyContent="end">
-        {isChartSupported && setIsChartDisplayed && (
+        {/* {isChartSupported && setIsChartDisplayed && (
           <ColoredIconButton
             onClick={() => {
               if (!isChartDisplayed && isSwapHotTokenDisplay) {
-                setIsSwapHotTokenDisplay(false)
+                // setIsSwapHotTokenDisplay(false)
               }
               toggleChartDisplayed()
             }}
@@ -140,8 +141,8 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
           >
             {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
           </ColoredIconButton>
-        )}
-        <ColoredIconButton
+        )} */}
+        {/* <ColoredIconButton
           variant="text"
           scale="sm"
           onClick={() => {
@@ -166,7 +167,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
               {tooltipVisible && (!isMobile || mobileTooltipShow) && tooltip}
             </>
           )}
-        </ColoredIconButton>
+        </ColoredIconButton> */}
         <NotificationDot show={expertMode}>
           <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
         </NotificationDot>

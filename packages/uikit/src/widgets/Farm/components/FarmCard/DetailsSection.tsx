@@ -64,11 +64,11 @@ export const DetailsSection: React.FC<React.PropsWithChildren<ExpandableSectionP
           <StyledLinkExternal href={addLiquidityUrl}>{t("Get %symbol%", { symbol: lpLabel })}</StyledLinkExternal>
         </Flex>
       )}
-      {infoAddress && (
+      {/* {infoAddress && (
         <Flex mb="2px" justifyContent={alignLinksToRight ? "flex-end" : "flex-start"}>
           <StyledLinkExternal href={infoAddress}>{t("See Pair Info")}</StyledLinkExternal>
         </Flex>
-      )}
+      )} */}
       {scanAddressLink && (
         <Flex mb="2px" justifyContent={alignLinksToRight ? "flex-end" : "flex-start"}>
           <StyledLinkExternal isBscScan href={scanAddressLink}>
